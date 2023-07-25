@@ -5,6 +5,7 @@ class RetoI {
 }
 
 fun main(){
+    // Reto
     println("digita tu edad")
     var edad:Int= readLine()!!.toInt()
     when(edad){

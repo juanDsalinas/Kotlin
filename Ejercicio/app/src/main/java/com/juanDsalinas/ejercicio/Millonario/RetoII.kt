@@ -4,6 +4,7 @@ class RetoII {
 }
 
 fun main(){
+    // Reto
     println("digita un numero")
     var num:Int = readLine()!!.toInt()
     println("ahora sumale 5 y al resultado multiplicalo por 3")
