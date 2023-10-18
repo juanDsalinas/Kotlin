@@ -1,0 +1,119 @@
+creamos un object - al momento de crear un kotlin file nos
+aparece la opcion, lo llamamos Matematicas, nos sirve para 
+guardar constantes y funciones 
+
+object Matematicas {
+	val PI = 3.1416
+	
+	fun aleatorio(min:Int, max:Int)=(Math.random()*(max+1-min).toInt())
+			
+}
+
+
+en la clase Carta
+
+fun calculosMatematicos(){
+	println("el valor de PI es ${Matematicas.PI}")
+	println("valor aleatorio entre 1 y 100")
+	println(Matematicas.aleatorio(1,100))
+}
+
+
+
+en la funcion main
+
+-------------------------- HERENCIA -----------------------------------------------------------------
+creamos un paquete llamado POOHerencia
+
+cramos una clase llamada Persona
+
+open class Persona(val nombre:String, val edad:Int){
+	open fun imprimir(){
+		println("Nombre $nombre")
+		println("Edad #edad
+	}	
+	
+}
+
+creamos una clase llamada empleados
+
+open class Empleado(nombre:String,edad:Int, val sueldo:Double):Persona(nombre,edad){
+	override fun imprimir(){
+		super.imprimir()
+		println("Sueldo: $sueldo")
+	}	
+	
+	fun impuesto(){
+		if(sueldo>5000000){
+			println("Debe pagar impuestos")
+		} else {
+			printnl("NO Debe pagar impuestos")
+		}
+	}
+	
+}
+
+creamos un archivo ejecutar
+
+fun main(){
+	val persona=Persona("Felipe",30)
+	persona.imprimir()
+	
+	val empleado=Empleado("Pepe",50,6000000.0)
+	empleado.imprimir()
+	empleado.impuestos()
+
+	val empleado2=Empleado("Maria",18,5000000.0)
+	empleado2.imprimir()
+	empleado2.impuestos()
+}
+
+----------------------------------------- ABSTRACCION ---------------------------------------
+creamos un nuevo paquete llamado POOAbstract
+
+creamos una clase abstracta Operacion 
+
+abstract class Operacion(val numero1:Int, val numero2:Int){
+	protected var resultado:Int=0
+
+	implementa todos los metodos
+	abstract fun operar()
+	
+	fun imprimir(){
+		println("Resultado: $resultado")
+	}	
+	
+}
+
+creamos una nueva clase llamada Sumar
+
+class Sumar(num1:Int,num2:Int):Operacion(num1,num2){
+	implementar todos sus metodos 
+	override fun operar(){
+		resultado= num1+num2
+	}
+}
+
+creamos un archivo ejecutar
+
+fun main(){
+	val suma = Sumar(1,5)
+	suma.operar()
+	suma.imprimir()
+
+	val resta = Restar(1,5)
+	suma.operar()
+	suma.imprimir()
+}
+
+class Restar(num1:Int,num2:Int):Operacion(num1,num2){
+	implementar todos sus metodos 
+	override fun operar(){
+		resultado= num1-num2
+	}
+}
+
+
+
+
+
