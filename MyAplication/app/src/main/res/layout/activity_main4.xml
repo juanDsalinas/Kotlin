@@ -21,21 +21,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="260px"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="400dp"
         android:text="Ingresar"
         android:textSize="34sp"
         app:layout_anchor="@+id/textView5"
         app:layout_anchorGravity="start|center" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/cantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="250px"
         android:layout_marginTop="400px"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Cantidad"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/button10"
@@ -46,38 +46,44 @@
         android:text="Button" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/SacarM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="400px"
         android:layout_marginTop="750px"
-        android:text="TextView"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="400px"
-        android:layout_marginTop="1720px"
-        android:text="TextView"
+        android:layout_marginLeft="300px"
+        android:layout_marginTop="1570px"
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/ingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="250px"
-        android:layout_marginTop="1350px"
+        android:layout_marginTop="1250px"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Cantidad"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="550px"
-        android:layout_marginTop="1500px"
+        android:layout_marginTop="1400px"
         android:text="Button" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="760px"
+        android:layout_marginTop="1750px"
+        android:text="Volver" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

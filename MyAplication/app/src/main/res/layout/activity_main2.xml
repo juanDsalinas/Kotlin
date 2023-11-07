@@ -16,7 +16,7 @@
         android:background="#000000">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="300px"
@@ -123,9 +123,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="200px"
-                android:layout_marginTop="130px"
-                android:text="Tu saldo es : $0"
+                android:layout_marginLeft="100px"
+                android:layout_marginTop="80px"
+                android:text="Bienvenido, gracias por elegirnos"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </FrameLayout>
@@ -133,7 +133,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="87dp"
-            android:layout_marginTop="1685px"
+            android:layout_marginTop="1750px"
             android:background="#000000">
 
         </FrameLayout>
