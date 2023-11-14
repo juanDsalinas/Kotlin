@@ -1,9 +1,9 @@
-package com.AngelB6.poo2687391.POOColaboracion
+package com.exampl.repasoKotlin.POOColaboracion
 
 class Banco {
-    val cliente1: Cliente = Cliente("Luisa", 0f)
-    val cliente2: Cliente = Cliente("Luis", 0f)
-    val cliente3: Cliente = Cliente("Pedro", 0f)
+    val cliente1: Client = Client("Luisa", 0f)
+    val cliente2: Client = Client("Luis", 0f)
+    val cliente3: Client = Client("Pedro", 0f)
 
     fun movimientos(){
         cliente1.consignar(100000f)

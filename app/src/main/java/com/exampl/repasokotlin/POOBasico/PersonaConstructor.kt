@@ -1,4 +1,4 @@
-package com.AngelB6.poo2687391.POOBasico
+package com.exampl.repasoKotlin.POOColaboracion
 
 class PersonaConstructor constructor(nombre:String, edad:Int){
     var nombre: String = nombre

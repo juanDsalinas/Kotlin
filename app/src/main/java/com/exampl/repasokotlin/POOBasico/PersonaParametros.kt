@@ -1,4 +1,4 @@
-package com.AngelB6.poo2687391.POOBasico
+package com.exampl.repasoKotlin.POOColaboracion
 
 class PersonaParametros (var nombre:String, var edad:Int){
     fun imprimir(){

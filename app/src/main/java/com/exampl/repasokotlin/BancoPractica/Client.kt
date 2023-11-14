@@ -1,8 +1,8 @@
-package com.AngelB6.poo2687391.BancoPractica
+package com.exampl.repasoKotlin.POOColaboracion
 
-class Cliente {
+class Client {
     fun consignar(saldo: Float): Float {
-        println("Ingrese el valor que desea consignar:")
+        println("Cuanto desea consignar:")
         var cons: Float = readLine()!!.toFloat()
         var saldoFinal = cons + saldo
         return saldoFinal
@@ -10,12 +10,12 @@ class Cliente {
 
     fun retirar(saldo: Float): Float {
         var saldoFinal:Float =0f
-        println("Ingrese el valor que desea retirar:")
+        println("Cuanto retirar:")
         var cons: Float = readLine()!!.toFloat()
         if (cons <= saldo) {
              saldoFinal = saldo-cons
         }else{
-            println("Trasaccion Fallida. Fondos insuficientes.")
+            println("Fondos insuficientes")
             return saldo
         }
         if (saldoFinal != 0f){

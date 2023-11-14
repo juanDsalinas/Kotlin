@@ -1,4 +1,4 @@
-package com.AngelB6.poo2687391.POOColaboracion
+package com.exampl.repasoKotlin.POOColaboracion
 
 class Cliente (var nombre:String, var saldoCuenta:Float){
 
@@ -11,6 +11,6 @@ class Cliente (var nombre:String, var saldoCuenta:Float){
     }
 
     fun imprimir(){
-        println("${nombre} usted tiene un saldo en su cuenta ${saldoCuenta}")
+        println("Cuenta con un saldo de: ${saldoCuenta}")
     }
 }

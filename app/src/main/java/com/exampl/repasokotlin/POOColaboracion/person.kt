@@ -1,4 +1,4 @@
-package com.AngelB6.poo2687391.POOColaboracion
+package com.exampl.repasoKotlin.POOColaboracion
 
 class Persona {
     var nombre: String = ""

@@ -1,6 +1,6 @@
-package com.AngelB6.poo2687391.POOBasico
+package com.exampl.repasoKotlin.POOColaboracion
 
-class Persona {
+class Person {
     var nombre: String = ""
     var edad: Int = 0
 

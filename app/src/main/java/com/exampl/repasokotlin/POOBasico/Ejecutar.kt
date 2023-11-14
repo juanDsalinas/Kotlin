@@ -1,4 +1,4 @@
-package com.AngelB6.poo2687391.POOBasico
+package com.exampl.repasoKotlin.POOColaboracion
 
 fun main() {
 //    val persona1: Persona

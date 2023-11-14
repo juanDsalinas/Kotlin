@@ -1,8 +1,8 @@
-package com.AngelB6.poo2687391.BancoPractica
+package com.exampl.repasoKotlin.POOColaboracion
 
 fun main() {
 //    Creamos un objeto para ejecutar los metodos
-    val Cliente1 = Cliente()
+    val Cliente1 = Client()
 //    Arreglos que almacenaran los datos de los clientes
     var id = mutableListOf<Int>()
     var clientes = mutableListOf<String>()
