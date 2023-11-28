@@ -2,81 +2,93 @@ package com.exampl.repasoKotlin.POOColaboracion
 
 fun main() {
 //    Creamos un objeto para ejecutar los metodos
-    val Cliente1 = Client()
+    val Cliente = Client()
 //    Arreglos que almacenaran los datos de los clientes
     var id = mutableListOf<Int>()
     var clientes = mutableListOf<String>()
-    var clieDoc = mutableListOf<Int>()
-    var saldoClie = mutableListOf<Float>()
-//    Variable que alamacenara la respuesta del usuario por si desea salir del sistema
-    var rps: String="no"
-    var idUsua: Int
-//    Bienvenida al sistema y digitacion de clientes
-    println("Bienvenido!\nPor favor ingrese la cantidad de clientes que desea registrar:")
+    var numDoc = mutableListOf<Int>()
+    var saldoC = mutableListOf<Float>()
+
+    var res: String="no"
+    var idUsuario: Int
+
+
+    println("Cuantos clientes desea registrar")
     var cliCant:Int = readLine()!!.toInt()
     for (i in 1 .. cliCant){
-        println("Por favor ingrese el nombre del cliente N${i}:")
+        println("Nombre del cliente")
         var nomClie: String = readLine().toString()
         clientes.add(nomClie)
-        println("Por favor ingrese el numero de documento del cliente ${nomClie}:")
+        println("Numero de documento del cliente")
         var numClie: Int = readLine()!!.toInt()
-        clieDoc.add(numClie)
-        println("Por favor ingrese el saldo del cliente ${nomClie}:")
+        numDoc.add(numClie)
+        println("Saldo del cliente")
         var saldo: Float = readLine()!!.toFloat()
-        saldoClie.add(saldo)
-        println("${nomClie} su id de ususario es: ${i}")
+        saldoC.add(saldo)
+        println("Tu ID es: ${i}")
         id.add(i-1)
     }
-    println("Se han resgistrado los clientes con exito.")
-//    Menu
+    println("Se registraron los clientes satisfactoriamente :)")
+
+
     do {
-        println("¿Que desea hacer?\n1. Consignar\n2. Retirar\n3. Consultar Saldo\n4. Salir")
+        println("¿Que Deseas hacer?\n1. Consignar\n2. Retirar\n3. Consultar Saldo\n4. Salir")
         var seleccion:Int = readLine()!!.toInt()
         when (seleccion){
+
             1 ->{
-                println("Usted selecciono la opcion consignar\nPor favor ingrese su ID de usuario:")
-                idUsua = readLine()!!.toInt()
-                idUsua-=1
-                if (idUsua == id[idUsua]) {
-                    println("Bienvenido ${clientes[idUsua]}\nSu numero de documento es: ${clieDoc[idUsua]} y su saldo es ${saldoClie[idUsua]}")
-                    saldoClie[idUsua]=Cliente1.consignar(saldoClie[idUsua])
-                    println("Trasaccion finalizada\nSu saldo final es: ${saldoClie[idUsua]}")
+                println("Por favor ingrese su ID de usuario:")
+                idUsuario = readLine()!!.toInt()
+                idUsuario-=1
+                if (idUsuario == id[idUsuario]) {
+                    println("Bienvenido, tu  saldo es ${saldoC[idUsuario]}")
+                    saldoC[idUsuario]=Cliente.consignar(saldoC[idUsuario])
+                    println("Trasaccion finalizada\nSu saldo final es: ${saldoC[idUsuario]}")
                 }else{
-                    println("Su ID de usuario no fue encontrado. Por favor vuelva a intentarlo")
+                    println("ID invalido, vuelve a intentarlo")
                 }
             }
+
             2 ->{
-                println("Usted selecciono la opcion retirar\nPor favor ingrese su ID de usuario:")
-                idUsua = readLine()!!.toInt()
-                idUsua-=1
-                if (idUsua == id[idUsua]) {
-                    println("Bienvenido ${clientes[idUsua]}\nSu numero de documento es: ${clieDoc[idUsua]} y su saldo es ${saldoClie[idUsua]}")
-                    saldoClie[idUsua]= Cliente1.retirar(saldoClie[idUsua])!!
-                    println("Trasaccion finalizada\nSu saldo final es: ${saldoClie[idUsua]}")
+                println("Ingrese su ID de usuario:")
+                idUsuario = readLine()!!.toInt()
+                idUsuario-=1
+                if (idUsuario == id[idUsuario]) {
+                    println("Bienvenido ${clientes[idUsuario]}\nSu numero de documento es: ${numDoc[idUsuario]} y su saldo es ${saldoC[idUsuario]}")
+                    saldoC[idUsuario]= Cliente.retirar(saldoC[idUsuario])!!
+                    println("Trasaccion finalizada\nSu saldo final es: ${saldoC[idUsuario]}")
                 }else{
                     println("Su ID de usuario no fue encontrado. Por favor vuelva a intentarlo")
                 }
             }
+
             3 ->{
                 println("Usted seleccion la opcion consultar saldo\nPor favor ingrese su ID de usuario:")
-                idUsua = readLine()!!.toInt()
-                idUsua-=1
-                if (idUsua == id[idUsua]) {
-                    println("Bienvenido ${clientes[idUsua]}\nSu numero de documento es: ${clieDoc[idUsua]} y su saldo es ${saldoClie[idUsua]}")
+                idUsuario = readLine()!!.toInt()
+                idUsuario-=1
+                if (idUsuario == id[idUsuario]) {
+                    println("Bienvenido ${clientes[idUsuario]}\nSu numero de documento es: ${numDoc[idUsuario]} y su saldo es ${saldoC[idUsuario]}")
                 }else{
                     println("Su ID de usuario no fue encontrado. Por favor vuelva a intentarlo")
                 }
             }
+
             4 ->{
                 println("Usted selecciono la opcion salir\n¿Seguro desea salir? (Si - No)")
-                rps = readLine().toString().lowercase()
-                val total = saldoClie.sum()
+                res = readLine().toString().lowercase()
+                val total = saldoC.sum()
                 println("La suma de los saldos de las cuentas resgitradas son: ${total}")
                 break
+
             }
-            else -> println("Ingreso una opcion incorrecta. Por favor vuelva a intentarlo.")
+
+            else -> println("Opcion incorrecta. Vuelve a intentarlo")
         }
-        println("¿Desea salir? (Si - No)")
-        rps = readLine().toString().lowercase()
-    }while (rps=="no")
+
+        println("¿Desea salir de la aplicacion? Si - No")
+        res = readLine().toString().lowercase()
+
+    }
+
+    while (res=="no")
 }

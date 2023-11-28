@@ -10,9 +10,9 @@ class PersonaConstructor constructor(nombre:String, edad:Int){
 
     fun mayorEdad(){
         if (edad >= 18){
-            println("${nombre} usted es mayor de edad. Usted puede ingresar.")
+            println("${nombre} eres mayor de edad, Puede ingresar.")
         }else{
-            println("${nombre} usted es menor de edad. No puede ingresar.")
+            println("${nombre} eres menor de edad, Puede ingresar.")
         }
     }
 }

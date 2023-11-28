@@ -15,16 +15,16 @@ class Person {
 
     fun mayorEdad(){
         if (edad >= 18){
-            println("${nombre} usted es mayor de edad. Usted puede ingresar.")
+            println("${nombre} usted es mayor de edad, Puedes ingresar")
         }else{
-            println("${nombre} usted es menor de edad. No puede ingresar.")
+            println("${nombre} usted es menor de edad, Puedes ingresar")
         }
     }
 
     fun captuData(){
-        println("Por favor ingrese su nombre:")
+        println("Ingrese su nombre")
         nombre = readLine().toString()
-        println("Por favor ingrese su edad:")
+        println("Ingrese su edad")
         edad = readLine()!!.toInt()
     }
 }

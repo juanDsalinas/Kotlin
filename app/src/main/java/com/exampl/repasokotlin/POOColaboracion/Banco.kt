@@ -1,9 +1,9 @@
 package com.exampl.repasoKotlin.POOColaboracion
 
 class Banco {
-    val cliente1: Client = Client("Luisa", 0f)
-    val cliente2: Client = Client("Luis", 0f)
-    val cliente3: Client = Client("Pedro", 0f)
+    val cliente1: Cliente = Cliente("Juan", 0f)
+    val cliente2: Cliente = Cliente("Joaquin", 0f)
+    val cliente3: Cliente = Cliente("Diana", 0f)
 
     fun movimientos(){
         cliente1.consignar(100000f)
@@ -14,7 +14,7 @@ class Banco {
 
     fun estadoCuenta(){
         val total= cliente1.saldoCuenta+cliente2.saldoCuenta+cliente3.saldoCuenta
-        println("El saldo total en el banco es: ${total}")
+        println("El saldo total es ${total}")
         cliente1.imprimir()
         cliente2.imprimir()
         cliente3.imprimir()

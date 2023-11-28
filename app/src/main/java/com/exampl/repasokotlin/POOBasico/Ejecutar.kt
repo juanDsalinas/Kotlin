@@ -17,7 +17,7 @@ fun main() {
 //    persona1.imprimir()
 //    persona1.mayorEdad()
 
-    val persona1 = PersonaParametros("Angel", 32)
+    val persona1 = PersonaParametros("Juancho", 32)
     persona1.imprimir()
     persona1.mayorEdad()
 }

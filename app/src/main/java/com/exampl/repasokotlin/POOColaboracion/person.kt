@@ -20,7 +20,7 @@ class Persona {
 
 fun main() {
     val persona1 = Persona()
-    persona1.nombre="Angel"
+    persona1.nombre="Juan"
     persona1.edad=18
     println(persona1.nombre)
     println(persona1.edad)
