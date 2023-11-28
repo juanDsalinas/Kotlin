@@ -1,9 +1,8 @@
 package com.exampl.repasoKotlin.POOColaboracion
 
 fun main() {
-//    Creamos un objeto para ejecutar los metodos
+
     val Cliente = Client()
-//    Arreglos que almacenaran los datos de los clientes
     var id = mutableListOf<Int>()
     var clientes = mutableListOf<String>()
     var numDoc = mutableListOf<Int>()
